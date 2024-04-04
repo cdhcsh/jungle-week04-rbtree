@@ -1,4 +1,4 @@
-#include "rbtree.h"
+#include "bst.h"
 
 #include <stdlib.h>
 
