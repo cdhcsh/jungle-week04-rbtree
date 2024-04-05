@@ -2,7 +2,7 @@
 #include "stdio.h"
 
 int main(int argc, char *argv[]) {
-    rbtree *tr = new_rbtree();
-    printf("hello!!!!!!\n");
-    printf("%p", tr);
+    bst *tree = new_bst();
+    printf("%p",tree);
+//    delete_bst(tree);
 }

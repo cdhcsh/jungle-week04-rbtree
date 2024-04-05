@@ -2,10 +2,17 @@
 
 CFLAGS=-Wall -g
 
-run:
+run: build
+	./main
+
+test:build
+	./main
+	valgrind ./main
+
+
+build:
 	${MAKE} clean
 	${MAKE} main
-	./main
 
 main: main.o bst.o
 
