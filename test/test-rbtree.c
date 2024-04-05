@@ -87,7 +87,7 @@ static int comp(const void *p1, const void *p2) {
   } else {
     return 0;
   }
-};
+}
 
 // min/max should return the min/max value of the tree
 void test_minmax(key_t *arr, const size_t n) {
