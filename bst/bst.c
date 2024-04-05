@@ -10,6 +10,8 @@ static node_t *_min(const node_t *t);
 
 static node_t *_max(const node_t *t);
 
+static void _delete_node(node_t *t);
+
 bst *new_bst(void) {
     bst *p = (bst *) calloc(1, sizeof(bst));
 //  *p->root = NULL
@@ -17,8 +19,7 @@ bst *new_bst(void) {
 }
 
 void delete_bst(bst *t) {
-
-    free(t);
+    _delete_node(t->root);
 }
 
 static void _delete_node(node_t *t) {
@@ -32,6 +33,7 @@ static void _delete_node(node_t *t) {
     if (t->right != NULL) {
         _delete_node(t->right);
     }
+    free(t);
 }
 
 node_t *bst_insert(bst *t, const key_t key) {
