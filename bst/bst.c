@@ -17,8 +17,21 @@ bst *new_bst(void) {
 }
 
 void delete_bst(bst *t) {
-    // TODO: reclaim the tree nodes's memory
+
     free(t);
+}
+
+static void _delete_node(node_t *t) {
+    if (t->left == NULL && t->right == NULL) {
+        free(t);
+        return;
+    }
+    if (t->left != NULL) {
+        _delete_node(t->left);
+    }
+    if (t->right != NULL) {
+        _delete_node(t->right);
+    }
 }
 
 node_t *bst_insert(bst *t, const key_t key) {
