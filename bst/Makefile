@@ -10,9 +10,7 @@ test:build
 	valgrind ./main
 
 
-build:
-	${MAKE} clean
-	${MAKE} main
+build: clean main
 
 main: main.o bst.o
 
