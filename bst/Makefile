@@ -9,8 +9,10 @@ test:build
 	./main
 	valgrind ./main
 
+update:
+	git pull
 
-build: clean main
+build: update clean main
 
 main: main.o bst.o
 
