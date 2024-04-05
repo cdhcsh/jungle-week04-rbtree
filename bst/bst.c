@@ -20,6 +20,7 @@ bst *new_bst(void) {
 
 void delete_bst(bst *t) {
     _delete_node(t->root);
+    free(t);
 }
 
 static void _delete_node(node_t *t) {
