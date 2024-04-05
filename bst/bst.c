@@ -23,6 +23,9 @@ void delete_bst(bst *t) {
 }
 
 static void _delete_node(node_t *t) {
+    if (t == NULL){
+        return;
+    }
     if (t->left == NULL && t->right == NULL) {
         free(t);
         return;
